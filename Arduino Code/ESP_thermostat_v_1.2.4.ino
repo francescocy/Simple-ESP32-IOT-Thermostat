@@ -66,8 +66,8 @@ int del = 0; //general delay to run at beginning of loop
 #define BTN3      16 //temp +
 #define BTN4      17 //temp -
 
-const char* ssid = "MINOU";   //replace with your SSID
-const char* password = "thispasswordissaferthantheprevious"; //password
+const char* ssid = "YOUR_SSID_HERE";   //replace with your SSID
+const char* password = "YOUR_PASSWORD_HERE"; //password
 
 String input_field = "15.0";
 String last_temperature;
