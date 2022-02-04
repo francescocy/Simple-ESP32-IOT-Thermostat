@@ -23,3 +23,5 @@ Included libraries: WiFi.h; AsyncTCP.h; ESPAsyncWebServer.h; Wire.h; OneWire.h; 
 HOW TO USE:
 Open the .ino file with Arduino IDE or Atom, edit it to suit your WiFi settings, Board, LCD type/size, pinout etc... Compile it and upload it!
 I hope I'll have time to upload a more extensive guide soon.
+
+Bonus: You can try the pre-compiled .bin file to test the code, but it may not play well with different ESP boards and LCDs/OLEDs; it also won't be able to connect to WiFi without the proper credentials.
