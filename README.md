@@ -19,3 +19,8 @@ Step-Down module, isolated 220V AC -> 5V DC 0.6A
 SOFTWARE:
 Developed with Arduino IDE 1.8.19
 Included libraries: WiFi.h; AsyncTCP.h; ESPAsyncWebServer.h; Wire.h; OneWire.h; DallasTemperature.h; AsyncElegantOTA.h; Arduino_GFX_Library.h
+
+HOW TO USE:
+You have two possible choices:
+1-[NOT RECOMMENDED!] Download the .bin file in the Arduino Code folder and upload to a NodeMCU-32s or clone board, buy identical hardware and wire it up exactly the same as mine (pinout can be seen in the .ino file, I'll try to add a schematic later).
+2-[RECCOMENDED] Open the .ino file with Arduino IDE or Atom, edit it to suit your controller, LCD type/size, pinout etc... Compile it and upload it!
