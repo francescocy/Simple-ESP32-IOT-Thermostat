@@ -1,13 +1,15 @@
 # Simple-ESP32-IOT-Thermostat
-INTRODUZIONE:
-Questo progetto nasce dalla necessità di sostituire il nostro vetusto e farraginoso cronotermostato di casa con un moderno dispositivo IOT, senza fare però affidamento su prodotti di terze parti basati su App proprietarie.
+INTRODUCTION:
+This project was born out of a simple idea; replacing our old and clunky thermostat in the living room with a modern IOT device, while keeping it simple, DIY and fully open-source. I didn't want to rely on a home assistant or a dodgy app-controlled pre-built thermostat, as they tend to have no long-term support and also have too many options.
 
-SCELTE PROGETTUALI:
-L'obiettivo è ottenere un'interfaccia locale estremamente semplice, che possa essere capita a colpo d'occhio. Funzioni più avanzate (come programmazione settimanale e aggiunta sensori e controllo pompe di calore delle camere) potranno essere aggiunte in seguito e controllate tramite interfaccia HTML.
-Il termostato deve essere integrato nella parete, all'interno della scatolina Bticino LivingLight
-Deve essere presente un display LCD che permetta di conoscere e modificare i parametri principali direttamente sul termostato, senza bisogno di accedere alla pagina WEB; il display e la pagina devono aggiornarsi l'un l'altra in tempo reale.
+DEVELOPMENT CHOICES:
+It's always good practice to make a list of mandatory specs and features, so that both software and hardware are developed from the ground-up to include them.
+Main objective is to end up with an extremely simple LCD interface in the living room.
+The unit must fit within the original thermostat's volume and mimick its look; a 3D printed faceplate will be designed for this.
+The LCD must show and allow editing of all key paramenters (set temperature, current temperature, furnace status...)
+Advanced options can be added later and will be controlled through an HTML page.
 
-HARDWARE
+HARDWARE:
 NodeMCU-32s
 Dallas DS18B20 digital temperature sensor
 ST7735 SPI LCD 1.8"
