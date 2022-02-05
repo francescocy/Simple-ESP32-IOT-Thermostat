@@ -1,4 +1,7 @@
 # Simple-ESP32-IOT-Thermostat
+
+DISCLAIMER - This project was originally developed in Italian, I'll try to translate as much of it as possible in English; code and comments are English-only already.
+
 INTRODUCTION
 This project was born out of a simple idea: replacing our old and clunky living room thermostat with a modern IOT one, while keeping it simple, DIY and fully open-source. I didn't want to rely on a home assistant or a dodgy app-controlled pre-built thermostat, as they tend to have inexistent long-term support and come with too many options.
 
