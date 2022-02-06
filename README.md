@@ -20,7 +20,9 @@ HiLink HLK-PM01 Step-Down module, isolated 220V AC -> 5V DC 0.6A
 
 SOFTWARE:
 Developed with Arduino IDE 1.8.19
+
 Included libraries: WiFi.h; AsyncTCP.h; ESPAsyncWebServer.h; Wire.h; OneWire.h; DallasTemperature.h; AsyncElegantOTA.h; Arduino_GFX_Library.h
+
 OTA update: https://github.com/ayushsharma82/ElegantOTA
 
 HOW TO USE:
