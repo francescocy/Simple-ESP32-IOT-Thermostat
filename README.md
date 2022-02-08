@@ -2,6 +2,8 @@
 
 DISCLAIMER - This project was originally developed in Italian, I'll try to translate as much of it as possible in English; code and comments are English-only already.
 
+PLEASE USE THE LATEST VERSION OF THE .ino FILE! New features and bugfixes are listed as comments at the beggining of each .ino file.
+
 
 INTRODUCTION
 
@@ -43,4 +45,4 @@ HOW TO USE:
 Open the .ino file with Arduino IDE or Atom, edit it to suit your WiFi settings, Board, LCD type/size/rotation, pinout etc... Compile it and upload it!
 I hope I'll have time to upload a more extensive guide soon.
 
-Bonus: You can try the pre-compiled .bin file to test the code, but it may not play well with different ESP boards and LCDs/OLEDs; it also won't be able to connect to WiFi without the proper credentials.
+Bonus: You can try the pre-compiled .bin file to test the code, but it may not play well with different ESP boards and LCDs/OLEDs; starting from V 1.2.5 you can create a temporary guest wifi network from your router using the baked-in wifi credentials SSID="wifi" PASSWORD="password" (intended for testing only, please download the .ino file, compile it locally with your own wifi credentials and upload it to your esp32).
