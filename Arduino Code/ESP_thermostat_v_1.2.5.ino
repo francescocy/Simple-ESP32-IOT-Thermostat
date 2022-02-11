@@ -4,16 +4,6 @@
  * Reset timer when user presses I/O button or un-checks field in html page to disable
  * Re-draw menu when pressing I/O or T+ & T- at the same time (useful if stray characters have been printed)
  * menu item drawing moved to "drawMenu" function
- * 
- * New in release 1.2.4:
- * Added emojis -> more intuitive HTML view
- * Starting a timer will now automatically enable thermostat
- * Changed links to project: PDF guide for end user and GitHub link to repo added
- * 
- * New in release 1.2.3:
- * Removed debug variables introduced in 1.2.2 to track down brownout-like problems
- * Added auto-refresh of main page after variable input. A fallback link is also present if the page is not loaded
- * Improved timer readability on built-in LCD by aligning single digits to the right
  */
 
 #include <WiFi.h>
@@ -73,8 +63,8 @@ int del = 0; //general delay to run at beginning of loop
 #define BTN3      16 //temp +
 #define BTN4      17 //temp -
 
-const char* ssid = "wifi";   //replace with your SSID
-const char* password = "password"; //password
+const char* ssid = "MINOU";   //replace with your SSID
+const char* password = "thispasswordissaferthantheprevious"; //password
 
 String input_field = "15.0";
 String last_temperature;
@@ -269,7 +259,7 @@ gfx->setFont(&FreeMono8pt7b);
   delay(1000); // 1sec
 
 //Print main menu elements only once, this helps reduce flicker
- drawMenu;
+ drawMenu();
   
 
 sensors.begin();
@@ -337,7 +327,7 @@ else if (digitalRead(BTN1) == LOW && digitalRead(BTN2) == LOW) {
 // Re-draw menu items if T+ & T- are pressed at the same time
 else if (digitalRead(BTN3) == LOW && digitalRead(BTN4) == LOW) {
   // Fill LCD with black and re-Print main menu elements only once, in case they got garbled
-    drawMenu;
+    drawMenu();
 }
 
 //safety limits to avoid over/under-heating
@@ -354,7 +344,7 @@ else if (digitalRead(BTN3) == LOW && digitalRead(BTN4) == LOW) {
     enable_trigger = "checked";
     BTN_Press = 1;
     del = btndelays;
-    drawMenu;
+    drawMenu();
   }
   else if(digitalRead(BTN1) == LOW && input_field2 == "true" && enable_trigger == "checked" && del == 0){
     triggerActive = false;
@@ -363,7 +353,7 @@ else if (digitalRead(BTN3) == LOW && digitalRead(BTN4) == LOW) {
     BTN_Press = 1;
     del = btndelays;
     tcnt = 1; // Reset timer when disabling
-    drawMenu;
+    drawMenu();
   }
 
   if(digitalRead(BTN2) == LOW && timer < 361 && del == 0){
